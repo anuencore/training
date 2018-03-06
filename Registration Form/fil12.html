@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<script type="text/javascript">
+$("#hangerHtsInsert").on("keypress keyup blur",function (event) {
+            //this.value = this.value.replace(/[^0-9\.]/g,'');
+    $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+        });
+$("#hangerHts").on("keypress keyup blur",function (event) {
+            //this.value = this.value.replace(/[^0-9\.]/g,'');
+      $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+            if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+         });
+ </script>
+
+ 
+	
+</head>
+
+
+<body>
+  <form action="file1.html"  method="GET">
+	<table>
+	
+	<tr>
+    <td><label for="name" > Name:</label></td>
+	<td><input type="text" name="name"></td>
+	</tr>
+	<tr>
+	<td><label for="age">Age</label></td>
+	<td><input type="number" min="1" max="60" value="1"></td>
+	</tr>
+	
+	<tr>
+	<td><label for="number">Mobile Number :</label></td>
+	<td><input type="number" name="number"></td>
+	</tr>
+	
+	<tr>
+	<td><label for="mail">E-mail :</label></td><br>
+	<td><input type="email" name="mail"></td>
+	</tr>
+	
+	<tr>
+	<td><label for="gender">Gender: </label></td>
+    <td><input type="radio" id="gender" name="gender" value="male"/>Male</td> 
+    <td><input type="radio" id="gender" name="gender" value="female"/>Female</td>  
+	</tr>
+	
+	<tr>
+	<td><label for="Hobbies">Hobbies:</label></td>
+	<td><input type="checkbox" id="Cricket" name="Cricket" value="Cricket"></td>
+	<td><label for="Cricket">Cricket</label></td>
+	<td><input type="checkbox" id="FootBall" name="FootBall" value="FootBall"></td>
+	<td><label for="FootBall">FootBall</label></td>
+	<td><input type="checkbox" id="Chess" name="Chess" value="Chess"></td>
+	<td><label for="Chess">Chess</label></td>
+	</tr>
+	
+	<tr>
+	<td align="centre">
+    <input type="submit" value="Submit"></td>
+	<td><input type="reset" value="reset"></td>
+	</tr>
+	
+	
+	</table>
+	</form>
+
+</body>
+</html>
